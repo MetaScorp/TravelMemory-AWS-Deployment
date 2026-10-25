@@ -72,7 +72,7 @@ See the included `LICENSE` file for the applicable license terms.
 
 ## Contact
 
-Project repository: `YOUR_PRIVATE_REPOSITORY_URL`
+Project repository: `https://github.com/MetaScorp/TravelMemory-AWS-Deployment.git`
 
 ## Acknowledgments
 
