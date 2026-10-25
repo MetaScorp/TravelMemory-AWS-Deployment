@@ -1,49 +1,81 @@
-# Travel Memory
 
-`.env` file to work with the backend after creating a database in mongodb: 
+# TravelMemory — AWS Deployment
 
-```
-MONGO_URI='ENTER_YOUR_URL'
-PORT=3001
-```
+## About The Project
 
-Data format to be added: 
+This project focuses on deploying the TravelMemory web application on AWS. It covers hosting the frontend and backend, connecting MongoDB Atlas, and distributing traffic across multiple EC2 instances.
 
-```json
-{
-    "tripName": "Incredible India",
-    "startDateOfJourney": "19-03-2022",
-    "endDateOfJourney": "27-03-2022",
-    "nameOfHotels":"Hotel Namaste, Backpackers Club",
-    "placesVisited":"Delhi, Kolkata, Chennai, Mumbai",
-    "totalCost": 800000,
-    "tripType": "leisure",
-    "experience": "Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, ",
-    "image": "https://t3.ftcdn.net/jpg/03/04/85/26/360_F_304852693_nSOn9KvUgafgvZ6wM0CNaULYUa7xXBkA.jpg",
-    "shortDescription":"India is a wonderful country with rich culture and good people.",
-    "featured": true
-}
-```
+### Built With
 
+- [React](https://react.dev/)
+- [Node.js](https://nodejs.org/)
+- [Express](https://expressjs.com/)
+- [MongoDB Atlas](https://www.mongodb.com/atlas)
+- [Amazon EC2](https://aws.amazon.com/ec2/)
+- [Nginx](https://nginx.org/)
+- AWS Application Load Balancer
 
-For frontend, you need to create `.env` file and put the following content (remember to change it based on your requirements):
-```bash
-REACT_APP_BACKEND_URL=http://localhost:3001
-```
+## Getting Started
 
-## How to run BE
+### Prerequisites
 
-Note: Make sure you have the .env file already added
-```bash
-cd backend
-npm install
-node index.js
-```
+- Git
+- Node.js and npm
+- MongoDB Atlas account
 
-## How to run FE
-Note: Make sure you have the .env file already added
-```bash
-cd frontend
-npm install
-npm start
-```
+### Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone YOUR_PRIVATE_REPOSITORY_URL
+   cd TravelMemory
+   ```
+
+2. Install backend dependencies:
+
+   ```sh
+   cd backend
+   npm install
+   ```
+
+3. Install frontend dependencies:
+
+   ```sh
+   cd ../frontend
+   npm install
+   ```
+
+4. Configure the required environment variables for MongoDB and the backend using the project's configuration.
+
+## Usage
+
+The application allows users to record and share travel experiences. During deployment, the frontend and backend were hosted on EC2 instances, with Nginx handling web traffic and an AWS Application Load Balancer distributing requests.
+
+## Roadmap
+
+- [x] Deploy the application on EC2
+- [x] Connect MongoDB Atlas
+- [x] Configure Nginx and backend service
+- [x] Configure load balancing and health checks
+- [x] Test application functionality
+- [ ] Configure a custom domain through Cloudflare
+- [ ] Configure HTTPS
+
+## Contributing
+
+This repository documents my deployment work based on the original TravelMemory project. Please review the original project's license before reusing or modifying its code.
+
+## License
+
+See the included `LICENSE` file for the applicable license terms.
+
+## Contact
+
+Project repository: `YOUR_PRIVATE_REPOSITORY_URL`
+
+## Acknowledgments
+
+- [Original TravelMemory project](https://github.com/UnpredictablePrashant/TravelMemory)
+- [AWS Documentation](https://docs.aws.amazon.com/)
+- [MongoDB Atlas Documentation](https://www.mongodb.com/docs/atlas/)
